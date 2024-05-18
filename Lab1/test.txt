@@ -1,0 +1,16 @@
+hello world!
+fd[0] = 3
+fd[0] = 4
+id: 58770
+CMakeLists.txt
+a.out
+add_bytes.asm
+add_bytes.obj
+assemble
+assembler.c
+cmake-build-debug
+instructions
+other_way
+test.txt
+testingYASH
+testingYASH.c

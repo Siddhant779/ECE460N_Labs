@@ -1,0 +1,155 @@
+add
+and
+brn
+brp
+brnp
+brz
+brnz
+brzp
+brnzp
+halt
+jmp
+jsr
+jsrr
+ldb
+ldw
+lea
+nop
+not
+ret
+lshf
+rshfl
+rshfa
+rti
+stb
+stw
+trap
+xor
+
+
+
+
+
+
+; Name 1: Ben Endara
+; Name 2: Siddhant Pandit
+; UTEID 1: bbe276
+; UTEID 2: shp695
+
+	.orig x3000
+
+	lea   r0, bytes  ; load r0 with pointer to bytes
+	ldw   r0, r0, #0
+	ldb   r1, r0, #0 ; load r1 and r2 with bytes
+	ldb   r2, r0, #1
+
+	add   r1, r1, r2 ; add bytes
+	stb   r1, r0, #2 ; store the result
+
+	brzp  nonNeg     ; if negative, take ones complement
+	not   r1, r1
+nonNeg	rshfl r2, r1, #7 ; overflow flag is in bit 7
+	stb   r2, r0, #3 ; store overflow flag
+	halt
+
+bytes	.fill x3100      ; address of bytes
+	.end
+
+
+
+
+
+
+
+
+
+
+    values[0] = registerCalc(line.args[0]);
+    if(values[0]==-1){
+        values[0]= lookup_symbol(table,line.args[0]);
+        if(values[0]==-1) {
+            values[0] = strtol(line.args[0], NULL, 16);
+        }
+    }
+    yes_register=line.args[1];
+    values[1] = registerCalc(line.args[1]);
+    if(values[1]==-1){
+        values[1]= lookup_symbol(table,line.args[1]);
+        if(values[1]==-1) {
+            values[1] = strtol(yes_register, NULL, 16);
+        }
+    }
+    yes_register=line.args[2];
+    values[2] = registerCalc(line.args[2]);
+    if(values[2]==-1){
+        values[2]= lookup_symbol(table,line.args[2]);
+        if(values[2]==-1) {
+            values[2] = strtol(yes_register, NULL, 16);
+        }
+    }
+
+
+
+
+
+
+
+
+
+; my code for the add_bytes.asm file
+
+
+
+.ORIG x4000 ; not sure what address to put it in but did a random address
+
+;R0 will determine if a overflow is possible - if R0 is -1 then that means overflow isnt possible
+; R1 will hold number one
+; R2 will hold number two
+; R3 will hold whether number one is positive or negative - if its negative the register will have a negative one - positive means that the register has zero
+; R4 will hold whether number one is positive or negative - if its negative the register will have a negative one - positive means that the regsiter has zero
+; R5 will hold the addition of both number one and two
+;intializing all the registers
+AND R0 R0 #0
+AND R1 R1 #0
+AND R2 R2 #0
+AND R3 R3 #0
+AND R4 R4 #0
+AND R5 R5 #0
+
+LDW R1 Num1
+LDW R2 Num2
+LDB R1 R1 #0
+BRzp posNum
+LDW R3 Neg1 ; if number one is negative then put -1 in r3
+posNum LDB R2 R2 #0
+Brzp posNum2
+LDW R4 Neg1 ;; if number two is negative then put -1 in r4
+posNum2 ADD R5 R2 R1 ; the sum is in r5
+ADD R0 R3 R4
+ADD R0 R0 #1 ;if the sum is -1 that means both numbers are negative, if the sum is 0 then they have differing signs (no overflow), and if the sum is one that means they are both positive
+BRz skip
+BRp OverFlowNeg
+; R0 now will hold the shifted register
+LSHF R0 R5 #8 ; condition code is set but need to make sure
+Brnz skip ; if both numbers are negative but the sum is positive there is overflow
+AND R5 R5 x00FF ; overflow
+ADD R5 R5 x0100
+BRnzp OverFlowImposs ; store the answer
+OverFlowNeg LSHF R0 R5 #8 ; shifting to see the condition bit
+Brzp skip ; both numbers are positive but the sum is negative so there is overflow
+AND R5 R5 x00FF ; overflow
+ADD R5 R5 x0100
+Brnzp OverFlowImposs ; store the answer
+skip AND R5 R5 x00FF
+OverFlowImposs LDW R1 Ans
+STW R5 R1 #0 ; using word so that it stores the sum into x3102 and then x3103 - follows little endian
+; store the value into the correct address
+; R5 is in the format of 0x(overflow bit could be - x0000 or 0x0100) || and the sum in bit 7-0
+
+Num1 .FILL x3101
+Num2 .FILL x3102
+Ans .FILL x3103
+Neg1 .FILL #-1
+
+.END
+

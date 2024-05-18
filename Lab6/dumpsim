@@ -1,0 +1,366 @@
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 94
+PC              : 0x3058
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x00ff
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  0
+V_AGEX_BR_STALL :  0
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  0
+
+------------- DE   Latches --------------
+DE_NPC          :  0x3058
+DE_IR           :  0x7282
+DE_V            :  1
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x3056
+AGEX_SR1        :  0x305e
+AGEX_SR2        :  0x0012
+AGEX_CC         :  1
+AGEX_IR         :  0x3882
+AGEX_DRID       :  4
+AGEX_CS         :  10101011100001100000
+AGEX_V          :  1
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x3054
+MEM_ALU_RESULT  :  0x0034
+MEM_ADDRESS     :  0x305f
+MEM_CC          :  1
+MEM_IR          :  0x3681
+MEM_DRID        :  3
+MEM_CS          :  00001100000
+MEM_V           :  1
+
+------------- SR   Latches --------------
+SR_NPC          :  0x3054
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0x0034
+SR_ADDRESS      :  0x305b
+SR_IR           :  0x3681
+SR_DRID         :  3
+SR_CS           :  0000
+SR_V            :  0
+
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 95
+PC              : 0x305a
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x00ff
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  0
+V_AGEX_BR_STALL :  0
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  0
+
+------------- DE   Latches --------------
+DE_NPC          :  0x305a
+DE_IR           :  0xf025
+DE_V            :  1
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x3058
+AGEX_SR1        :  0x305e
+AGEX_SR2        :  0x1234
+AGEX_CC         :  1
+AGEX_IR         :  0x7282
+AGEX_DRID       :  1
+AGEX_CS         :  10111011100001110000
+AGEX_V          :  1
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x3056
+MEM_ALU_RESULT  :  0x0012
+MEM_ADDRESS     :  0x3060
+MEM_CC          :  1
+MEM_IR          :  0x3882
+MEM_DRID        :  4
+MEM_CS          :  00001100000
+MEM_V           :  1
+
+------------- SR   Latches --------------
+SR_NPC          :  0x3054
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0x0034
+SR_ADDRESS      :  0x305f
+SR_IR           :  0x3681
+SR_DRID         :  3
+SR_CS           :  0000
+SR_V            :  1
+
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 96
+PC              : 0x305a
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x00ff
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  1
+V_AGEX_BR_STALL :  0
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  0
+
+------------- DE   Latches --------------
+DE_NPC          :  0x305c
+DE_IR           :  0x1234
+DE_V            :  0
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x305a
+AGEX_SR1        :  0x0000
+AGEX_SR2        :  0x0000
+AGEX_CC         :  1
+AGEX_IR         :  0xf025
+AGEX_DRID       :  7
+AGEX_CS         :  00000000000111011010
+AGEX_V          :  1
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x3058
+MEM_ALU_RESULT  :  0x1234
+MEM_ADDRESS     :  0x3062
+MEM_CC          :  1
+MEM_IR          :  0x7282
+MEM_DRID        :  1
+MEM_CS          :  00001110000
+MEM_V           :  1
+
+------------- SR   Latches --------------
+SR_NPC          :  0x3056
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0x0012
+SR_ADDRESS      :  0x3060
+SR_IR           :  0x3882
+SR_DRID         :  4
+SR_CS           :  0000
+SR_V            :  1
+
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 97
+PC              : 0x305a
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x00ff
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  0
+V_AGEX_BR_STALL :  1
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  0
+
+------------- DE   Latches --------------
+DE_NPC          :  0x305c
+DE_IR           :  0x1234
+DE_V            :  0
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x305c
+AGEX_SR1        :  0x0000
+AGEX_SR2        :  0x0012
+AGEX_CC         :  1
+AGEX_IR         :  0x1234
+AGEX_DRID       :  1
+AGEX_CS         :  00000100100000001111
+AGEX_V          :  0
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x305a
+MEM_ALU_RESULT  :  0x0000
+MEM_ADDRESS     :  0x004a
+MEM_CC          :  1
+MEM_IR          :  0xf025
+MEM_DRID        :  7
+MEM_CS          :  00111011010
+MEM_V           :  1
+
+------------- SR   Latches --------------
+SR_NPC          :  0x3058
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0x1234
+SR_ADDRESS      :  0x3062
+SR_IR           :  0x7282
+SR_DRID         :  1
+SR_CS           :  0000
+SR_V            :  1
+
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 98
+PC              : 0x0000
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x00ff
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  0
+V_AGEX_BR_STALL :  0
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  1
+
+------------- DE   Latches --------------
+DE_NPC          :  0x305c
+DE_IR           :  0x1234
+DE_V            :  0
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x305c
+AGEX_SR1        :  0x0000
+AGEX_SR2        :  0x0012
+AGEX_CC         :  1
+AGEX_IR         :  0x1234
+AGEX_DRID       :  1
+AGEX_CS         :  00000100100000001111
+AGEX_V          :  0
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x305c
+MEM_ALU_RESULT  :  0xfff4
+MEM_ADDRESS     :  0x0068
+MEM_CC          :  1
+MEM_IR          :  0x1234
+MEM_DRID        :  1
+MEM_CS          :  00000001111
+MEM_V           :  0
+
+------------- SR   Latches --------------
+SR_NPC          :  0x305a
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0x0000
+SR_ADDRESS      :  0x004a
+SR_IR           :  0xf025
+SR_DRID         :  7
+SR_CS           :  1010
+SR_V            :  1
+
+
+Current register/bus values :
+
+Current architectural state :
+-------------------------------------
+Cycle Count     : 99
+PC              : 0x0002
+CCs: N = 0  Z = 0  P = 1
+Registers:
+0: 0x0000
+1: 0x1234
+2: 0x305e
+3: 0x0034
+4: 0x0012
+5: 0x0078
+6: 0x0056
+7: 0x305a
+
+------------- Stall Signals -------------
+ICACHE_R        :  1
+DEP_STALL       :  0
+V_DE_BR_STALL   :  0
+V_AGEX_BR_STALL :  0
+MEM_STALL       :  0
+V_MEM_BR_STALL  :  0
+
+------------- DE   Latches --------------
+DE_NPC          :  0x0002
+DE_IR           :  0x0000
+DE_V            :  1
+
+------------- AGEX Latches --------------
+AGEX_NPC        :  0x305c
+AGEX_SR1        :  0x0000
+AGEX_SR2        :  0x0012
+AGEX_CC         :  1
+AGEX_IR         :  0x1234
+AGEX_DRID       :  1
+AGEX_CS         :  00000100100000001111
+AGEX_V          :  0
+
+------------- MEM  Latches --------------
+MEM_NPC         :  0x305c
+MEM_ALU_RESULT  :  0xfff4
+MEM_ADDRESS     :  0x0068
+MEM_CC          :  1
+MEM_IR          :  0x1234
+MEM_DRID        :  1
+MEM_CS          :  00000001111
+MEM_V           :  0
+
+------------- SR   Latches --------------
+SR_NPC          :  0x305c
+SR_DATA         :  0x0000
+SR_ALU_RESULT   :  0xfff4
+SR_ADDRESS      :  0x0068
+SR_IR           :  0x1234
+SR_DRID         :  1
+SR_CS           :  1111
+SR_V            :  0
+
